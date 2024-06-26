@@ -1,5 +1,7 @@
-const helloWorld = function() {
-  return ''
-};
+const helloWorld = require('./helloWorld');
 
-module.exports = helloWorld;
+describe('Hello World', function() {
+  test('says "Hello, World!"', function() {
+    expect(helloWorld()).toEqual('Hello, World!');
+  });
+});
