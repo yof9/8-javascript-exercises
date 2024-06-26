@@ -1,6 +1,6 @@
 const sumAll = function(a, b) {
-     
-    let sum = typeof a !== "number" || typeof b !== "number" || a < 0 || b < 0 ? 
+
+    let sum = !Number.isInteger(a) || !Number.isInteger(b) || a < 0 || b < 0 ? 
     "ERROR" : a <= b ?
      (b - a + 1) * (a + b) / 2 :
      (a - b + 1) * (a + b) / 2;
